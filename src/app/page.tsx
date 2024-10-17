@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { Check } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -52,21 +53,33 @@ export default function Home() {
       </section>
 
       {/* Segunda Seção */}
-      <section className="bg-white">
-        <h2>Como funciona?</h2>
+      <section className="bg-white py-16">
+        <div className="container mx-auto flex flex-col items-center">
+          <h2 className="text-3xl font-bold">Como funciona?</h2>
 
-        <div>
-          <Image
-            src="/assets/images/woman.svg"
-            alt="mulher carregando caixas de e-books"
-            width={392}
-            height={392}
-          />
-          <ul>
-            <li>Acesso a 1 ebook por mês</li>
-            <li>Curadoria especial</li>
-            <li>Cancele quando quiser</li>
-          </ul>
+          <div className="flex items-center justify-between gap-16">
+            <Image
+              src="/assets/images/woman.svg"
+              alt="mulher carregando caixas de e-books"
+              width={392}
+              height={392}
+            />
+
+            <ul className="space-y-10 text-3xl text-muted-foreground">
+              <li className="flex items-center justify-between gap-8">
+                <p>Acesso a 1 ebook por mês</p>
+                <Check className="text-green-600" />
+              </li>
+              <li className="flex items-center justify-between gap-8">
+                <p>Curadoria especial</p>
+                <Check className="text-green-600" />
+              </li>
+              <li className="flex items-center justify-between gap-8">
+                <p>Cancele quando quiser</p>
+                <Check className="text-green-600" />
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
