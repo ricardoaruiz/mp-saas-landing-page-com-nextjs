@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -6,7 +7,7 @@ export default function Home() {
   return (
     <main className="py-12">
       {/* Primeira Seção */}
-      <section className="container mx-auto">
+      <section className="container mx-auto pb-28">
         <nav className="mb-20 flex items-center justify-between">
           <Image
             src="/assets/images/logo.svg"
@@ -15,7 +16,7 @@ export default function Home() {
             height={40}
           />
 
-          <div className="space-x-6">
+          <div className="space-x-2">
             <Button variant="link" asChild>
               <Link href="/login">Funcionamento</Link>
             </Button>
@@ -26,17 +27,28 @@ export default function Home() {
           </div>
         </nav>
 
-        <h1>Simplifique Seus Estudos</h1>
-        <p>
-          Deixe que nós fazermos a curadoria para você. Assine nossa plataforma
-          e receba todos os meses um ebook novo de programação.
-        </p>
+        <div className="flex flex-col items-center">
+          <h1 className="mb-2 text-6xl/loose font-bold text-black">
+            Simplifique Seus Estudos
+          </h1>
 
-        <form>
-          <input type="text" placeholder="Coloque seu email" />
-          <button>Assine Agora</button>
-        </form>
-        <p>Comece sua assinatura agora mesmo. Cancele quando quiser. </p>
+          <p className="mb-16 w-full max-w-[830px] text-center text-xl/9 text-gray-500">
+            Deixe que nós fazermos a curadoria para você. Assine nossa
+            plataforma e receba todos os meses um ebook novo de programação.
+          </p>
+
+          <form className="flex w-full items-center justify-center gap-3">
+            <Input
+              type="text"
+              placeholder="Coloque seu email"
+              className="max-w-sm shadow-md"
+            />
+            <Button>Assine Agora</Button>
+          </form>
+          <p className="text-xs/9 text-muted-foreground">
+            Comece sua assinatura agora mesmo. Cancele quando quiser.
+          </p>
+        </div>
       </section>
 
       {/* Segunda Seção */}
