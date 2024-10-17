@@ -1,12 +1,19 @@
+import Image from 'next/image';
+
 export default function Home() {
   return (
-    <main>
+    <main className="py-12">
       {/* Primeira Seção */}
-      <section>
-        <nav>
-          <img src="" alt="" />
+      <section className="container mx-auto">
+        <nav className="mb-20 flex items-center justify-between">
+          <Image
+            src="/assets/images/logo.svg"
+            alt="logo"
+            width={129}
+            height={40}
+          />
 
-          <div>
+          <div className="space-x-6">
             <button>Funcionamento</button>
             <button>Preço</button>
             <button>Login</button>
@@ -27,11 +34,16 @@ export default function Home() {
       </section>
 
       {/* Segunda Seção */}
-      <section>
+      <section className="bg-white">
         <h2>Como funciona?</h2>
 
         <div>
-          <img src="" alt="" />
+          <Image
+            src="/assets/images/woman.svg"
+            alt="mulher carregando caixas de e-books"
+            width={392}
+            height={392}
+          />
           <ul>
             <li>Acesso a 1 ebook por mês</li>
             <li>Curadoria especial</li>
@@ -72,7 +84,7 @@ export default function Home() {
       </section>
 
       {/* Quarta Seção */}
-      <section>
+      <section className="bg-white">
         <h2>Pronto Para Mudar Sua Vida?</h2>
         <p>
           Faça como milhares de outras pessoas. Assine nosso produto e tenha
@@ -87,7 +99,12 @@ export default function Home() {
       {/* Rodapé */}
       <footer>
         <div>
-          <img src="" alt="" />
+          <Image
+            src="/assets/images/logo.svg"
+            alt="logo"
+            width={129}
+            height={40}
+          />
           <p>LivroSaaS</p>
         </div>
         <p>© 2024 LivroSaaS. Todos os direitos reservados.</p>
