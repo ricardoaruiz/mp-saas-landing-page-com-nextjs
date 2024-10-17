@@ -1,4 +1,12 @@
 import { Button } from '@/components/ui/button';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle
+} from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Check } from 'lucide-react';
 import Image from 'next/image';
@@ -53,7 +61,7 @@ export default function Home() {
       </section>
 
       {/* Segunda Seção */}
-      <section className="bg-white py-16">
+      <section className="bg-white py-12">
         <div className="container mx-auto flex flex-col items-center">
           <h2 className="text-3xl font-bold">Como funciona?</h2>
 
@@ -84,34 +92,61 @@ export default function Home() {
       </section>
 
       {/* Terceira Seção */}
-      <section>
-        <h2>Preço Simples e Transparente</h2>
-        <p>
+      <section className="container mx-auto flex flex-col items-center py-12">
+        <h2 className="mb-8 text-6xl/loose font-bold text-black">
+          Preço Simples e Transparente
+        </h2>
+
+        <p className="max-w-[827px] text-center text-xl/9">
           Pra que inúmeros planos quando nós sabemos exatamente o que é melhor
-          para você? Assine o nosso plano mensal Pro Premium VIP e garanta
-          mensalmente um ebook novo de programação. E por menos de um café por
-          dia.
+          para você?
+        </p>
+        <p className="max-w-[827px] text-center text-xl/9">
+          Assine o nosso plano mensal Pro Premium VIP e garanta mensalmente um
+          ebook novo de programação. E por menos de um café por dia.
         </p>
 
-        <article>
-          <div>
-            <h3>Plano Pro Premium VIP</h3>
-            <p>Tudo que você precisa para seus estudos</p>
-          </div>
+        <Card className="mt-20">
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold">
+              Plano Pro Premium VIP
+            </CardTitle>
+            <CardDescription className="text-xs text-muted-foreground">
+              Tudo que você precisa para seus estudos
+            </CardDescription>
+          </CardHeader>
 
-          <section>
-            <p>R$29/mês</p>
+          <CardContent>
+            <p className="mb-4 text-2xl font-bold">
+              R$29
+              <span className="text-muted-foreground">/mês</span>
+            </p>
 
             <ul>
-              <li>1 ebbok por mês</li>
-              <li>Curadoria especial</li>
-              <li>Acesso ilimitado</li>
-              <li>Cancele a qualquer momento</li>
+              <li className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Check className="text-green-600" size={16} />1 ebbok por mês
+              </li>
+              <li className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Check className="text-green-600" size={16} />
+                Curadoria especial
+              </li>
+              <li className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Check className="text-green-600" size={16} />
+                Acesso ilimitado
+              </li>
+              <li className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Check className="text-green-600" size={16} />
+                Cancele a qualquer momento
+              </li>
             </ul>
-          </section>
+          </CardContent>
 
-          <button>Assine Agora</button>
-        </article>
+          <CardFooter>
+            <Button size="full" className="py-3">
+              Assine Agora
+            </Button>
+          </CardFooter>
+        </Card>
       </section>
 
       {/* Quarta Seção */}
