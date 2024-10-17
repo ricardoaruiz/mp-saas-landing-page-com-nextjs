@@ -14,10 +14,10 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className="py-12">
-      {/* Primeira Seção */}
-      <section className="container mx-auto pb-28">
-        <nav className="mb-20 flex items-center justify-between">
+    <>
+      {/* Header */}
+      <header className="main-container mt-10">
+        <nav className="flex items-center justify-between">
           <Image
             src="/assets/images/logo.svg"
             alt="logo"
@@ -35,146 +35,164 @@ export default function Home() {
             <Button variant="outline">Login</Button>
           </div>
         </nav>
+      </header>
 
-        <div className="flex flex-col items-center">
-          <h1 className="mb-2 text-6xl/loose font-bold text-black">
-            Simplifique Seus Estudos
-          </h1>
+      {/* Main */}
+      <main>
+        {/* Primeira Seção */}
+        <section className="main-container-center py-12">
+          <div className="flex flex-col items-center">
+            <h1 className="mb-2 text-6xl/loose font-bold text-black">
+              Simplifique Seus Estudos
+            </h1>
 
-          <p className="mb-16 w-full max-w-[830px] text-center text-xl/9 text-gray-500">
-            Deixe que nós fazermos a curadoria para você. Assine nossa
-            plataforma e receba todos os meses um ebook novo de programação.
-          </p>
-
-          <form className="flex w-full items-center justify-center gap-3">
-            <Input
-              type="text"
-              placeholder="Coloque seu email"
-              className="max-w-sm shadow-md"
-            />
-            <Button>Assine Agora</Button>
-          </form>
-          <p className="text-xs/9 text-muted-foreground">
-            Comece sua assinatura agora mesmo. Cancele quando quiser.
-          </p>
-        </div>
-      </section>
-
-      {/* Segunda Seção */}
-      <section className="bg-white py-12">
-        <div className="container mx-auto flex flex-col items-center">
-          <h2 className="text-3xl font-bold">Como funciona?</h2>
-
-          <div className="flex items-center justify-between gap-16">
-            <Image
-              src="/assets/images/woman.svg"
-              alt="mulher carregando caixas de e-books"
-              width={392}
-              height={392}
-            />
-
-            <ul className="space-y-10 text-3xl text-muted-foreground">
-              <li className="flex items-center justify-between gap-8">
-                <p>Acesso a 1 ebook por mês</p>
-                <Check className="text-green-600" />
-              </li>
-              <li className="flex items-center justify-between gap-8">
-                <p>Curadoria especial</p>
-                <Check className="text-green-600" />
-              </li>
-              <li className="flex items-center justify-between gap-8">
-                <p>Cancele quando quiser</p>
-                <Check className="text-green-600" />
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Terceira Seção */}
-      <section className="container mx-auto flex flex-col items-center py-12">
-        <h2 className="mb-8 text-6xl/loose font-bold text-black">
-          Preço Simples e Transparente
-        </h2>
-
-        <p className="max-w-[827px] text-center text-xl/9">
-          Pra que inúmeros planos quando nós sabemos exatamente o que é melhor
-          para você?
-        </p>
-        <p className="max-w-[827px] text-center text-xl/9">
-          Assine o nosso plano mensal Pro Premium VIP e garanta mensalmente um
-          ebook novo de programação. E por menos de um café por dia.
-        </p>
-
-        <Card className="mt-20">
-          <CardHeader>
-            <CardTitle className="text-2xl font-bold">
-              Plano Pro Premium VIP
-            </CardTitle>
-            <CardDescription className="text-xs text-muted-foreground">
-              Tudo que você precisa para seus estudos
-            </CardDescription>
-          </CardHeader>
-
-          <CardContent>
-            <p className="mb-4 text-2xl font-bold">
-              R$29
-              <span className="text-muted-foreground">/mês</span>
+            <p className="mb-16 w-full max-w-[830px] text-center text-xl/9 text-gray-500">
+              Deixe que nós fazermos a curadoria para você. Assine nossa
+              plataforma e receba todos os meses um ebook novo de programação.
             </p>
 
-            <ul>
-              <li className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Check className="text-green-600" size={16} />1 ebbok por mês
-              </li>
-              <li className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Check className="text-green-600" size={16} />
-                Curadoria especial
-              </li>
-              <li className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Check className="text-green-600" size={16} />
-                Acesso ilimitado
-              </li>
-              <li className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Check className="text-green-600" size={16} />
-                Cancele a qualquer momento
-              </li>
-            </ul>
-          </CardContent>
+            <form className="flex w-full items-center justify-center gap-3">
+              <Input
+                type="text"
+                placeholder="Coloque seu email"
+                className="max-w-sm shadow-md"
+              />
+              <Button>Assine Agora</Button>
+            </form>
+            <p className="text-xs/9 text-muted-foreground">
+              Comece sua assinatura agora mesmo. Cancele quando quiser.
+            </p>
+          </div>
+        </section>
 
-          <CardFooter>
-            <Button size="full" className="py-3">
+        {/* Segunda Seção */}
+        <section className="bg-white py-12">
+          <div className="main-container-center">
+            <h2 className="text-3xl font-bold">Como funciona?</h2>
+
+            <div className="flex items-center justify-between gap-16">
+              <Image
+                src="/assets/images/woman.svg"
+                alt="mulher carregando caixas de e-books"
+                width={392}
+                height={392}
+              />
+
+              <ul className="space-y-10 text-3xl text-muted-foreground">
+                <li className="flex items-center justify-between gap-8">
+                  <p>Acesso a 1 ebook por mês</p>
+                  <Check className="text-green-600" />
+                </li>
+                <li className="flex items-center justify-between gap-8">
+                  <p>Curadoria especial</p>
+                  <Check className="text-green-600" />
+                </li>
+                <li className="flex items-center justify-between gap-8">
+                  <p>Cancele quando quiser</p>
+                  <Check className="text-green-600" />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Terceira Seção */}
+        <section className="main-container-center py-12">
+          <h2 className="mb-8 text-6xl/loose font-bold text-black">
+            Preço Simples e Transparente
+          </h2>
+
+          <p className="max-w-[827px] text-center text-xl/9 text-muted-foreground">
+            Pra que inúmeros planos quando nós sabemos exatamente o que é melhor
+            para você?
+          </p>
+          <p className="max-w-[827px] text-center text-xl/9 text-muted-foreground">
+            Assine o nosso plano mensal Pro Premium VIP e garanta mensalmente um
+            ebook novo de programação. E por menos de um café por dia.
+          </p>
+
+          <Card className="mt-20">
+            <CardHeader>
+              <CardTitle className="text-2xl font-bold">
+                Plano Pro Premium VIP
+              </CardTitle>
+              <CardDescription className="text-xs text-muted-foreground">
+                Tudo que você precisa para seus estudos
+              </CardDescription>
+            </CardHeader>
+
+            <CardContent>
+              <p className="mb-4 text-2xl font-bold">
+                R$29
+                <span className="text-muted-foreground">/mês</span>
+              </p>
+
+              <ul>
+                <li className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <Check className="text-green-600" size={16} />1 ebbok por mês
+                </li>
+                <li className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <Check className="text-green-600" size={16} />
+                  Curadoria especial
+                </li>
+                <li className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <Check className="text-green-600" size={16} />
+                  Acesso ilimitado
+                </li>
+                <li className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <Check className="text-green-600" size={16} />
+                  Cancele a qualquer momento
+                </li>
+              </ul>
+            </CardContent>
+
+            <CardFooter>
+              <Button size="full" className="py-3">
+                Assine Agora
+              </Button>
+            </CardFooter>
+          </Card>
+        </section>
+
+        {/* Quarta Seção */}
+        <section className="bg-white py-12">
+          <div className="main-container-center">
+            <h2 className="mb-2 text-6xl/loose font-bold text-black">
+              Pronto Para Mudar Sua Vida?
+            </h2>
+            <p className="max-w-[633px] text-center text-xl/9 text-muted-foreground">
+              Faça como milhares de outras pessoas. Assine nosso produto e tenha
+              garantido seus estudos{' '}
+            </p>
+
+            <Button className="mb-4 mt-11 w-full max-w-[422px]">
               Assine Agora
             </Button>
-          </CardFooter>
-        </Card>
-      </section>
 
-      {/* Quarta Seção */}
-      <section className="bg-white">
-        <h2>Pronto Para Mudar Sua Vida?</h2>
-        <p>
-          Faça como milhares de outras pessoas. Assine nosso produto e tenha
-          garantido seus estudos{' '}
-        </p>
-
-        <button>Assine Agora</button>
-
-        <p>Comece sua assinatura agora mesmo. Cancele quando quiser. </p>
-      </section>
+            <p className="text-xs text-muted-foreground">
+              Comece sua assinatura agora mesmo. Cancele quando quiser.{' '}
+            </p>
+          </div>
+        </section>
+      </main>
 
       {/* Rodapé */}
-      <footer>
-        <div>
-          <Image
-            src="/assets/images/logo.svg"
-            alt="logo"
-            width={129}
-            height={40}
-          />
-          <p>LivroSaaS</p>
+      <footer className="bg-white py-12">
+        <div className="main-container-center">
+          <div>
+            <Image
+              src="/assets/images/logo.svg"
+              alt="logo"
+              width={129}
+              height={40}
+            />
+          </div>
+
+          <p className="text-xs text-muted-foreground">
+            © 2024 LivroSaaS. Todos os direitos reservados.
+          </p>
         </div>
-        <p>© 2024 LivroSaaS. Todos os direitos reservados.</p>
       </footer>
-    </main>
+    </>
   );
 }
