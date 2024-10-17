@@ -1,4 +1,6 @@
+import { Button } from '@/components/ui/button';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -14,9 +16,13 @@ export default function Home() {
           />
 
           <div className="space-x-6">
-            <button>Funcionamento</button>
-            <button>Preço</button>
-            <button>Login</button>
+            <Button variant="link" asChild>
+              <Link href="/login">Funcionamento</Link>
+            </Button>
+            <Button variant="link" asChild>
+              <Link href="/login">Preço</Link>
+            </Button>
+            <Button variant="outline">Login</Button>
           </div>
         </nav>
 

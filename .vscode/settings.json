@@ -1,6 +1,13 @@
 {
   "editor.codeActionsOnSave": {
     "source.removeUnusedImports": "always",
-    "source.organizeImports": "always"
-  }
+    "source.organizeImports": "always",
+    "source.fixAll.eslint": "explicit",
+  },
+  "tailwindCSS.experimental.classRegex": [
+    [
+      "([\"'`][^\"'`]*.*?[\"'`])",
+      "[\"'`]([^\"'`]*).*?[\"'`]"
+    ]
+  ]
 }
