@@ -1,4 +1,4 @@
-import { Header, Logo, Navbar } from '@/components';
+import { Header, Logo, Navbar, Title } from '@/components';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -16,7 +16,6 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <>
-      {/* Header */}
       <Header>
         <Navbar.Root>
           <Logo href="#top" />
@@ -36,11 +35,9 @@ export default function Home() {
       {/* Main */}
       <main>
         {/* Primeira Seção */}
-        <section className="main-container-center py-28" id="top">
+        <section className="main-container-center py-36" id="top">
           <div className="flex flex-col items-center">
-            <h1 className="mb-2 text-6xl/loose font-bold text-black">
-              Simplifique Seus Estudos
-            </h1>
+            <Title className="mb-2">Simplifique Seus Estudos</Title>
 
             <p className="mb-16 w-full max-w-[830px] text-center text-xl/9 text-gray-500">
               Deixe que nós fazermos a curadoria para você. Assine nossa
@@ -64,7 +61,7 @@ export default function Home() {
         {/* Segunda Seção */}
         <section className="bg-white py-28" id="funcionamento">
           <div className="main-container-center">
-            <h2 className="text-3xl font-bold">Como funciona?</h2>
+            <Title as="h2">Como funciona?</Title>
 
             <div className="flex items-center justify-between gap-16">
               <Image
@@ -94,9 +91,9 @@ export default function Home() {
 
         {/* Terceira Seção */}
         <section className="main-container-center py-28" id="preco">
-          <h2 className="mb-8 text-6xl/loose font-bold text-black">
+          <Title as="h2" className="mb-8">
             Preço Simples e Transparente
-          </h2>
+          </Title>
 
           <p className="max-w-[827px] text-center text-xl/9 text-muted-foreground">
             Pra que inúmeros planos quando nós sabemos exatamente o que é melhor
@@ -153,9 +150,9 @@ export default function Home() {
         {/* Quarta Seção */}
         <section className="bg-white py-12">
           <div className="main-container-center">
-            <h2 className="mb-2 text-6xl/loose font-bold text-black">
+            <Title as="h2" className="mb-2">
               Pronto Para Mudar Sua Vida?
-            </h2>
+            </Title>
             <p className="max-w-[633px] text-center text-xl/9 text-muted-foreground">
               Faça como milhares de outras pessoas. Assine nosso produto e tenha
               garantido seus estudos{' '}
