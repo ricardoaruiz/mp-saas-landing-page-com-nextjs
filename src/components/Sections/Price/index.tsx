@@ -16,7 +16,7 @@ import { PriceProps } from './types';
 export const Price = ({ className, ...props }: PriceProps) => {
   return (
     <section
-      className={cn('main-container-center py-14 md:py-28', className)}
+      className={cn('main-container-center py-20 md:py-28', className)}
       {...props}
     >
       <Text as="h2" className="mb-8" align="center">

@@ -6,7 +6,7 @@ import { HowDoesItWorkProps } from './types';
 
 export const HowDoesItWork = ({ className, ...props }: HowDoesItWorkProps) => {
   return (
-    <section className={cn('bg-white py-14 md:py-28', className)} {...props}>
+    <section className={cn('bg-white py-20 md:py-28', className)} {...props}>
       <div className="main-container-center">
         <Text as="h2" className="mb-8 md:mb-0">
           {data.sections.howDoesItWork.title}
