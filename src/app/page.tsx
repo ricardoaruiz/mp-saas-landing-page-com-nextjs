@@ -1,3 +1,4 @@
+import { Header, Logo, Navbar } from '@/components';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -16,18 +17,11 @@ export default function Home() {
   return (
     <>
       {/* Header */}
-      <header className="fixed -top-10 left-1/2 mt-10 flex h-[100px] w-full -translate-x-1/2 items-center bg-violet-100 shadow-md">
-        <nav className="main-container flex flex-1 items-center justify-between">
-          <Link href="#top">
-            <Image
-              src="/assets/images/logo.svg"
-              alt="logo"
-              width={129}
-              height={40}
-            />
-          </Link>
+      <Header>
+        <Navbar.Root>
+          <Logo href="#top" />
 
-          <div className="space-x-2">
+          <Navbar.ItemsContainer>
             <Button variant="link" asChild>
               <Link href="#funcionamento">Funcionamento</Link>
             </Button>
@@ -35,9 +29,9 @@ export default function Home() {
               <Link href="#preco">Preço</Link>
             </Button>
             <Button variant="outline">Login</Button>
-          </div>
-        </nav>
-      </header>
+          </Navbar.ItemsContainer>
+        </Navbar.Root>
+      </Header>
 
       {/* Main */}
       <main>
