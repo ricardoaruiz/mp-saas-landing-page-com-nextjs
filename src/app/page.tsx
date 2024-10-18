@@ -16,21 +16,23 @@ export default function Home() {
   return (
     <>
       {/* Header */}
-      <header className="main-container mt-10">
-        <nav className="flex items-center justify-between">
-          <Image
-            src="/assets/images/logo.svg"
-            alt="logo"
-            width={129}
-            height={40}
-          />
+      <header className="fixed -top-10 left-1/2 mt-10 flex h-[100px] w-full -translate-x-1/2 items-center bg-violet-100 shadow-md">
+        <nav className="main-container flex flex-1 items-center justify-between">
+          <Link href="#top">
+            <Image
+              src="/assets/images/logo.svg"
+              alt="logo"
+              width={129}
+              height={40}
+            />
+          </Link>
 
           <div className="space-x-2">
             <Button variant="link" asChild>
-              <Link href="/login">Funcionamento</Link>
+              <Link href="#funcionamento">Funcionamento</Link>
             </Button>
             <Button variant="link" asChild>
-              <Link href="/login">Preço</Link>
+              <Link href="#preco">Preço</Link>
             </Button>
             <Button variant="outline">Login</Button>
           </div>
@@ -40,7 +42,7 @@ export default function Home() {
       {/* Main */}
       <main>
         {/* Primeira Seção */}
-        <section className="main-container-center py-12">
+        <section className="main-container-center py-28" id="top">
           <div className="flex flex-col items-center">
             <h1 className="mb-2 text-6xl/loose font-bold text-black">
               Simplifique Seus Estudos
@@ -66,7 +68,7 @@ export default function Home() {
         </section>
 
         {/* Segunda Seção */}
-        <section className="bg-white py-12">
+        <section className="bg-white py-28" id="funcionamento">
           <div className="main-container-center">
             <h2 className="text-3xl font-bold">Como funciona?</h2>
 
@@ -97,7 +99,7 @@ export default function Home() {
         </section>
 
         {/* Terceira Seção */}
-        <section className="main-container-center py-12">
+        <section className="main-container-center py-28" id="preco">
           <h2 className="mb-8 text-6xl/loose font-bold text-black">
             Preço Simples e Transparente
           </h2>
