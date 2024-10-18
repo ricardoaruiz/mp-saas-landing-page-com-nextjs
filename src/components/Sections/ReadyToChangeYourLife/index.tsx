@@ -1,8 +1,13 @@
 import { Button, Text } from '@/components';
 import { data } from '@/constants';
-export const ReadyToChangeYourLive = () => {
+import { cn } from '@/lib/utils';
+import { ReadyToChangeYourLifeProps } from './types';
+export const ReadyToChangeYourLive = ({
+  className,
+  ...props
+}: ReadyToChangeYourLifeProps) => {
   return (
-    <section className="bg-white py-12">
+    <section className={cn('bg-white py-12', className)} {...props}>
       <div className="main-container-center">
         <Text as="h2" className="mb-2">
           {data.sections.readyToChangeYourLive.title}

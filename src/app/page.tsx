@@ -1,5 +1,5 @@
-import { Footer, Header, Logo, Navbar, Sections } from '@/components';
-import { Button } from '@/components/ui/button';
+import { Button, Footer, Header, Logo, Navbar, Sections } from '@/components';
+
 import Link from 'next/link';
 
 export default function Home() {
@@ -7,14 +7,14 @@ export default function Home() {
     <>
       <Header>
         <Navbar.Root>
-          <Logo href="#top" />
+          <Logo href="#section1" />
 
           <Navbar.ItemsContainer>
             <Button variant="link" asChild>
-              <Link href="#funcionamento">Funcionamento</Link>
+              <Link href="#section2">Funcionamento</Link>
             </Button>
             <Button variant="link" asChild>
-              <Link href="#preco">Preço</Link>
+              <Link href="#section3">Preço</Link>
             </Button>
             <Button variant="outline">Login</Button>
           </Navbar.ItemsContainer>
@@ -22,9 +22,9 @@ export default function Home() {
       </Header>
 
       <main>
-        <Sections.SimplifyYourStudies />
-        <Sections.HowDoesItWork />
-        <Sections.Price />
+        <Sections.SimplifyYourStudies id="section1" />
+        <Sections.HowDoesItWork id="section2" />
+        <Sections.Price id="section3" />
         <Sections.ReadyToChangeYourLive />
       </main>
 

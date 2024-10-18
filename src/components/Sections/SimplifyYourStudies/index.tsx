@@ -1,9 +1,17 @@
 import { Button, Input, Text } from '@/components';
 import { data } from '@/constants';
+import { cn } from '@/lib/utils';
+import { SimplifyYourStudiesProps } from './types';
 
-export const SimplifyYourStudies = () => {
+export const SimplifyYourStudies = ({
+  className,
+  ...props
+}: SimplifyYourStudiesProps) => {
   return (
-    <section className="main-container-center pb-16 pt-36" id="top">
+    <section
+      className={cn('main-container-center pb-16 pt-36', className)}
+      {...props}
+    >
       <Text as="h1" className="mb-2">
         {data.sections.simplifyYourStudies.title}
       </Text>

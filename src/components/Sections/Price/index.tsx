@@ -10,10 +10,15 @@ import {
   Text
 } from '@/components';
 import { data } from '@/constants';
+import { cn } from '@/lib/utils';
+import { PriceProps } from './types';
 
-export const Price = () => {
+export const Price = ({ className, ...props }: PriceProps) => {
   return (
-    <section className="main-container-center py-28" id="preco">
+    <section
+      className={cn('main-container-center py-28', className)}
+      {...props}
+    >
       <Text as="h2" className="mb-8">
         {data.sections.price.title}
       </Text>

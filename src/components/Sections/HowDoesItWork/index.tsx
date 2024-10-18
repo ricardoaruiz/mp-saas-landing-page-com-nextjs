@@ -1,10 +1,12 @@
 import { CheckList, Text } from '@/components';
 import { data } from '@/constants';
+import { cn } from '@/lib/utils';
 import Image from 'next/image';
+import { HowDoesItWorkProps } from './types';
 
-export const HowDoesItWork = () => {
+export const HowDoesItWork = ({ className, ...props }: HowDoesItWorkProps) => {
   return (
-    <section className="bg-white py-28" id="funcionamento">
+    <section className={cn('bg-white py-28', className)} {...props}>
       <div className="main-container-center">
         <Text as="h2">{data.sections.howDoesItWork.title}</Text>
 
