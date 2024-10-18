@@ -1,4 +1,5 @@
 import { Button, Footer, Header, Logo, Navbar, Sections } from '@/components';
+import { Menu } from 'lucide-react';
 
 import Link from 'next/link';
 
@@ -9,7 +10,13 @@ export default function Home() {
         <Navbar.Root>
           <Logo href="#section1" />
 
-          <Navbar.ItemsContainer>
+          <div className="block md:hidden">
+            <Button variant="ghost" size="icon">
+              <Menu />
+            </Button>
+          </div>
+
+          <Navbar.ItemsContainer className="hidden md:block">
             <Button variant="link" asChild>
               <Link href="#section2">Funcionamento</Link>
             </Button>

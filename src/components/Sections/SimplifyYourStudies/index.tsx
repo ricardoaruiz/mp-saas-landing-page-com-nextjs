@@ -12,7 +12,7 @@ export const SimplifyYourStudies = ({
       className={cn('main-container-center pb-16 pt-36', className)}
       {...props}
     >
-      <Text as="h1" className="mb-2">
+      <Text as="h2" className="mb-2" align="center">
         {data.sections.simplifyYourStudies.title}
       </Text>
 
@@ -20,7 +20,7 @@ export const SimplifyYourStudies = ({
         {data.sections.simplifyYourStudies.description}
       </Text>
 
-      <form className="flex w-full items-center justify-center gap-3">
+      <form className="mb-4 flex w-full items-center justify-center gap-3">
         <Input
           type="text"
           placeholder={data.sections.simplifyYourStudies.placeholderInput}
@@ -28,7 +28,8 @@ export const SimplifyYourStudies = ({
         />
         <Button>{data.sections.simplifyYourStudies.buttonLabel}</Button>
       </form>
-      <Text className="text-xs/9">
+
+      <Text className="text-[10px] md:text-sm" align="center">
         {data.sections.simplifyYourStudies.diclamer}
       </Text>
     </section>

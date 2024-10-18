@@ -11,10 +11,13 @@ export const CheckList = ({
 }: CheckListProps) => {
   if (type === 'bigAndRightCheck') {
     return (
-      <ul className={cn('space-y-10', className)} {...props}>
+      <ul className={cn('space-y-5 md:space-y-10', className)} {...props}>
         {items.map((item, index) => (
-          <li className="flex items-center justify-between gap-8" key={index}>
-            <Text className="text-3xl">{item}</Text>
+          <li
+            className="flex items-center justify-end gap-2 md:gap-4 lg:gap-8"
+            key={index}
+          >
+            <Text className="text-xs md:text-xl lg:text-3xl">{item}</Text>
             <Check className="text-green-600" />
           </li>
         ))}
@@ -23,14 +26,11 @@ export const CheckList = ({
   }
 
   return (
-    <ul className="space-y-1">
+    <ul className={(cn('space-y-1'), className)} {...props}>
       {items.map((item) => (
-        <li
-          key={item}
-          className="flex items-center gap-2 text-sm text-muted-foreground"
-        >
+        <li key={item} className="flex items-center gap-2">
           <Check className="text-green-600" size={16} />
-          {item}
+          <Text className="text-xs md:text-sm">{item}</Text>
         </li>
       ))}
     </ul>

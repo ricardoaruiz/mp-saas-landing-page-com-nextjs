@@ -16,16 +16,15 @@ import { PriceProps } from './types';
 export const Price = ({ className, ...props }: PriceProps) => {
   return (
     <section
-      className={cn('main-container-center py-28', className)}
+      className={cn('main-container-center py-14 md:py-28', className)}
       {...props}
     >
-      <Text as="h2" className="mb-8">
+      <Text as="h2" className="mb-8" align="center">
         {data.sections.price.title}
       </Text>
 
-      <Text className="max-w-[827px]">{data.sections.price.description1}</Text>
-      <Text className="max-w-[827px]" align="center">
-        {data.sections.price.description2}
+      <Text className="max-w-[320px] md:max-w-[820px]" align="center">
+        {data.sections.price.description1} {data.sections.price.description2}
       </Text>
 
       <Card className="mt-20">
@@ -39,7 +38,7 @@ export const Price = ({ className, ...props }: PriceProps) => {
         </CardHeader>
 
         <CardContent>
-          <Text className="mb-4 text-2xl font-bold">
+          <Text className="mb-4 text-2xl font-bold text-black">
             {data.sections.price.card.price}
             <Text as="span">{data.sections.price.card.frequency}</Text>
           </Text>
