@@ -1,4 +1,4 @@
-import { Header, Logo, Navbar, Title } from '@/components';
+import { Header, Logo, Navbar, Text } from '@/components';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -35,33 +35,33 @@ export default function Home() {
       {/* Main */}
       <main>
         {/* Primeira Seção */}
-        <section className="main-container-center py-36" id="top">
-          <div className="flex flex-col items-center">
-            <Title className="mb-2">Simplifique Seus Estudos</Title>
+        <section className="main-container-center pb-16 pt-36" id="top">
+          <Text as="h1" className="mb-2">
+            Simplifique Seus Estudos
+          </Text>
 
-            <p className="mb-16 w-full max-w-[830px] text-center text-xl/9 text-gray-500">
-              Deixe que nós fazermos a curadoria para você. Assine nossa
-              plataforma e receba todos os meses um ebook novo de programação.
-            </p>
+          <Text className="mb-16 w-full max-w-[830px]" align="center">
+            Deixe que nós fazermos a curadoria para você. Assine nossa
+            plataforma e receba todos os meses um ebook novo de programação.
+          </Text>
 
-            <form className="flex w-full items-center justify-center gap-3">
-              <Input
-                type="text"
-                placeholder="Coloque seu email"
-                className="max-w-sm shadow-md"
-              />
-              <Button>Assine Agora</Button>
-            </form>
-            <p className="text-xs/9 text-muted-foreground">
-              Comece sua assinatura agora mesmo. Cancele quando quiser.
-            </p>
-          </div>
+          <form className="flex w-full items-center justify-center gap-3">
+            <Input
+              type="text"
+              placeholder="Coloque seu email"
+              className="max-w-sm shadow-md"
+            />
+            <Button>Assine Agora</Button>
+          </form>
+          <Text className="text-xs/9">
+            Comece sua assinatura agora mesmo. Cancele quando quiser.
+          </Text>
         </section>
 
         {/* Segunda Seção */}
         <section className="bg-white py-28" id="funcionamento">
           <div className="main-container-center">
-            <Title as="h2">Como funciona?</Title>
+            <Text as="h2">Como funciona?</Text>
 
             <div className="flex items-center justify-between gap-16">
               <Image
@@ -71,17 +71,17 @@ export default function Home() {
                 height={392}
               />
 
-              <ul className="space-y-10 text-3xl text-muted-foreground">
+              <ul className="space-y-10">
                 <li className="flex items-center justify-between gap-8">
-                  <p>Acesso a 1 ebook por mês</p>
+                  <Text className="text-3xl">Acesso a 1 ebook por mês</Text>
                   <Check className="text-green-600" />
                 </li>
                 <li className="flex items-center justify-between gap-8">
-                  <p>Curadoria especial</p>
+                  <Text className="text-3xl">Curadoria especial</Text>
                   <Check className="text-green-600" />
                 </li>
                 <li className="flex items-center justify-between gap-8">
-                  <p>Cancele quando quiser</p>
+                  <Text className="text-3xl">Cancele quando quiser</Text>
                   <Check className="text-green-600" />
                 </li>
               </ul>
@@ -91,18 +91,18 @@ export default function Home() {
 
         {/* Terceira Seção */}
         <section className="main-container-center py-28" id="preco">
-          <Title as="h2" className="mb-8">
+          <Text as="h2" className="mb-8">
             Preço Simples e Transparente
-          </Title>
+          </Text>
 
-          <p className="max-w-[827px] text-center text-xl/9 text-muted-foreground">
+          <Text className="max-w-[827px]">
             Pra que inúmeros planos quando nós sabemos exatamente o que é melhor
             para você?
-          </p>
-          <p className="max-w-[827px] text-center text-xl/9 text-muted-foreground">
+          </Text>
+          <Text className="max-w-[827px]" align="center">
             Assine o nosso plano mensal Pro Premium VIP e garanta mensalmente um
             ebook novo de programação. E por menos de um café por dia.
-          </p>
+          </Text>
 
           <Card className="mt-20">
             <CardHeader>
@@ -115,10 +115,10 @@ export default function Home() {
             </CardHeader>
 
             <CardContent>
-              <p className="mb-4 text-2xl font-bold">
+              <Text className="mb-4 text-2xl font-bold">
                 R$29
-                <span className="text-muted-foreground">/mês</span>
-              </p>
+                <Text as="span">/mês</Text>
+              </Text>
 
               <ul>
                 <li className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -150,21 +150,21 @@ export default function Home() {
         {/* Quarta Seção */}
         <section className="bg-white py-12">
           <div className="main-container-center">
-            <Title as="h2" className="mb-2">
+            <Text as="h2" className="mb-2">
               Pronto Para Mudar Sua Vida?
-            </Title>
-            <p className="max-w-[633px] text-center text-xl/9 text-muted-foreground">
+            </Text>
+            <Text className="max-w-[633px]" align="center">
               Faça como milhares de outras pessoas. Assine nosso produto e tenha
               garantido seus estudos{' '}
-            </p>
+            </Text>
 
             <Button className="mb-4 mt-11 w-full max-w-[422px]">
               Assine Agora
             </Button>
 
-            <p className="text-xs text-muted-foreground">
+            <Text className="text-xs">
               Comece sua assinatura agora mesmo. Cancele quando quiser.{' '}
-            </p>
+            </Text>
           </div>
         </section>
       </main>
@@ -181,9 +181,9 @@ export default function Home() {
             />
           </div>
 
-          <p className="text-xs text-muted-foreground">
+          <Text className="text-xs">
             © 2024 LivroSaaS. Todos os direitos reservados.
-          </p>
+          </Text>
         </div>
       </footer>
     </>
